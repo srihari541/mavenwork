@@ -515,10 +515,7 @@
             </plugins>
         </pluginManagement>
     </build>
-
-    
     <profiles>
-      
       <profile>
         <id>build-dist</id>
         <build>
@@ -546,8 +543,17 @@
           </plugins>
         </build>
       </profile>
-        
-    </profiles>
-    
-    
+<profile>
+<id>sonar</id>
+ <activation>
+   <activeByDefault>true</activeByDefault>
+     </activation>
+    <properties>
+     <!-- Optional URL to server. Default value is http://localhost:9000 -->
+     <sonar.host.url>
+     http://43.204.238.255:9000
+    </sonar.host.url>
+  </properties>
+</profile>     
+</profiles>
 </project>
